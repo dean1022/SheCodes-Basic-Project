@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiwi</title>
+    <style>
+      h1 {
+        background: lightgray;
+        font-family: "Courier New", Courier, monospace;
+        padding: 5px 0 5px 5px;
+        font-size: 40px;
+        font-weight: lighter;
+        text-align: center;
+      }
+
+      .sub-heading {
+        font-size: 20px;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 550px;
+        border-radius: 20px 20px 0 0;
+        box-shadow: 15px 10px 20px lightgray;
+      }
+
+      p {
+        text-align: center;
+        max-width: 530px;
+        display: block;
+        margin: 0 auto;
+        padding: 10px 10px;
+        background-color: #f6f7f9;
+        box-shadow: 15px 10px 20px lightgray;
+        border-radius: 0 0 20px 20px;
+        line-height: 20px;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto 5px;
+        font-size: 20px;
+        font-family: "Times New Roman", Times, serif;
+        color: white;
+        background: #b7b68a;
+        border-radius: 20px;
+        padding: 5px 10px;
+        border: 1px solid #b7b68a;
+        transition: all 275ms ease-in-out;
+      }
+
+      button:hover {
+        background: white;
+        color: #9ea767;
+        cursor: pointer;
+      }
+
+      .credits {
+        text-align: center;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      I Love Fruits
+      <span class="sub-heading">Especially Kiwi 🥝</span>
+    </h1>
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/881/original/Kiwi_Cuts_copy_1024x1024.png?1690942599"
+      alt="kiwi"
+    />
+    <p>
+      Kiwi is a form of <strong>Vitamin C</strong> which is known to reduce risk
+      of stroke and heart disease. Kiwi is also very delicious with fluffy
+      Japanese pancakes.
+
+      <a
+        href="https://www.webmd.com/diet/health-benefits-kiwi#:~:text=By%20helping%20to%20maintain%20a,lowering%20LDL%20or%20bad%20cholesterol."
+        target="_blank"
+        class="moreLink"
+        ><br />Learn more on WedMD</a
+      >
+    </p>
+    <button>BUY KIWI</button>
+    <div class="credits">This page was built by Lasini Kurukulasooriya</div>
+    <script>
+      function buyKiwi() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+
+        alert(
+          "Thank you, " +
+            name +
+            ", for providing us with your contact information. Please be on the look out for an email from us as our stocks do run out quickly!"
+        );
+      }
+
+      let buyKiwiButton = document.querySelector("button");
+
+      buyKiwiButton.addEventListener("click", buyKiwi);
+    </script>
+  </body>
+</html>
