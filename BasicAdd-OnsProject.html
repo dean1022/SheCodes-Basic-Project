@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reading Hobby</title>
+    <style>
+      body {
+        background-color: paleturquoise;
+        text-decoration: white;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      .mainPic {
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .mainPic:hover {
+        opacity: 0.9;
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+
+      .otherPic {
+        border-radius: 10px;
+        width: 100px;
+        height: 100px;
+      }
+
+      .booksButton {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid;
+        background: white;
+        border-radius: 8px;
+        font-size: 15px;
+        padding: 8px 15px;
+        border-color: paleturquoise;
+      }
+
+      .booksButton:hover {
+        background: paleturquoise;
+        cursor: pointer;
+      }
+
+      .themeButton {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid;
+        background: grey;
+        border-radius: 8px;
+        font-size: 15px;
+        padding: 8px 15px;
+        border-color: grey;
+        color: white;
+      }
+
+      .themeButton:hover {
+        background-color: paleturquoise;
+        cursor: pointer;
+        border-color: white;
+      }
+
+      .container {
+        max-width: 600px;
+        background: azure;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 15px auto;
+      }
+
+      footer {
+        margin: 20px 0;
+        text-align: center;
+      }
+
+      .gallery {
+        margin: 0 auto;
+        padding: 33px 30px 10px 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 5px;
+      }
+
+      .gallery img {
+        width: 100px;
+        border-radius: 7px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.5);
+      }
+
+      .dark {
+        background: black;
+        color: white;
+      }
+
+      .dark .container {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .dark a {
+        color: paleturquoise;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="themeButton">Change Theme</button>
+    <div class="container">
+      <h1>The Benefits of Reading</h1>
+      <h2>My Favourite Hobby</h2>
+      <br />
+      <a
+        href="https://www.healthline.com/health/benefits-of-reading-books"
+        target="_blank"
+      >
+        <img
+          src="https://i.pinimg.com/originals/d5/cc/f1/d5ccf15e2036668c8a51c253b3b42ccd.jpg"
+          alt="person reading a book by a window"
+          class="mainPic"
+        />
+      </a>
+      <div class="gallery">
+        <img
+          src="https://i.pinimg.com/originals/b5/4e/0a/b54e0ae3c55fdd53da121bd04a9b32a7.jpg"
+          alt="stacked books"
+          class="otherPic"
+        />
+        <img
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1KP2mXV7_Vu-tGZLJLjrb5ku46WeLUVlR4TODP8jpcSZfTk_LkbE_64t-eNHUZOnU-dOZnZZN6RB1Ql-TfY1XGwXF4cq8Fz6KXEqzJ9cBIT7VQDoCBgc0Ot2-Q79iqdmv1n1bobFGjJ7yghgfg6W77sxt1jUMzBNWn6MfLxM0QeIO3w0PM_zB0fBn/s649/c34aedca4f6e989ecd7256afda14b2b7.jpg"
+          alt="a book with birds and butterflies coming out of it"
+          class="otherPic"
+        />
+        <img
+          src="https://img.freepik.com/free-photo/high-angle-book-bookmark_23-2149871512.jpg"
+          alt="reading a book on bed"
+          class="otherPic"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT6VTm-sh9aE0UgJD1u2wmCvNw-eUu5Lrrqw&usqp=CAU"
+          alt="two pages in a book folded to make a heart"
+          class="otherPic"
+        />
+      </div>
+      <p>
+        Reading is one of my favourite ways to learn new things as well as
+        entertain myself when I have free time. Reading helps a lot in
+        broadening one's knowledge and understanding of subjects, and improve
+        cognitive function by increasing memoery retention and critical skills.
+      </p>
+      <a
+        href="https://www.healthline.com/health/benefits-of-reading-books"
+        target="_blank"
+        >Learn More on the Benefits of Reading!</a
+      >
+      <br /><br />
+
+      <button class="booksButton">Get A Library Card to Borrow Books</button>
+    </div>
+    <footer>Coded by Lasini Kurukulasooriya</footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark");
+      }
+
+      function libraryCard() {
+        let firstName = prompt("What is your first name?");
+        let lastName = prompt("What is your last name?");
+        let address = prompt(
+          "What is your home address? (Delivery Address for Your Library Card)"
+        );
+        let phoneNumber = prompt("What is your mobile phone number?");
+        alert(
+          "Thank you, " +
+            firstName +
+            ", for registering for a library card. Your library card will be delivered to your address within the next month. Once you receive your card, please visit your nearest library with your ID to activate your card. If there are any issues with your address, please contact 647-123-4567."
+        );
+      }
+
+      let themeButton = document.querySelector(".themeButton");
+      let booksButton = document.querySelector(".booksButton");
+      themeButton.addEventListener("click", changeTheme);
+      booksButton.addEventListener("click", libraryCard);
+    </script>
+  </body>
+</html>
